@@ -195,6 +195,10 @@ const ChainIcon = ({ className, type, ...props }: IconProps) => {
       [iconDark, iconLight] =
         type === 'icon' ? [strideIconDark, strideIconDark] : [strideLogoDark, strideLogoLight];
       break;
+    case 'spike':
+      [iconDark, iconLight] =
+        type === 'icon' ? [baseIconLight, baseIconLight] : [baseLogoLight, baseLogoLight];
+      break;
     default:
       throw new Error(`chain ${chainName} not supported`);
   }
