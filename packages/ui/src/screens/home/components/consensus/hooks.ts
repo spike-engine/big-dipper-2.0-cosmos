@@ -1,6 +1,6 @@
 import chainConfig from '@/chainConfig';
 import { hexToBech32 } from '@/utils/hex_to_bech32';
-import { GRAPHQL_TRANSPORT_WS_PROTOCOL, MessageType, stringifyMessage } from 'graphql-ws';
+// import { GRAPHQL_TRANSPORT_WS_PROTOCOL, MessageType, stringifyMessage } from 'graphql-ws';
 import WebSocket from 'isomorphic-ws';
 import numeral from 'numeral';
 import * as R from 'ramda';
@@ -60,8 +60,8 @@ export const useConsensus = () => {
       }));
     };
 
-    const keepAlive = 30000;
-    let queuedPing: ReturnType<typeof setTimeout>;
+    // const keepAlive = 30000;
+    // let queuedPing: ReturnType<typeof setTimeout>;
 
     let client: WebSocket;
     const stepHeader = {
@@ -86,14 +86,14 @@ export const useConsensus = () => {
         process.env.NEXT_PUBLIC_RPC_WEBSOCKET ||
           chainConfig.endpoints.publicRpcWebsocket ||
           chainConfig.endpoints.graphqlWebsocket ||
-          'ws://localhost:3000/websocket',
-        GRAPHQL_TRANSPORT_WS_PROTOCOL
+          'ws://localhost:3000/websocket'
+        // GRAPHQL_TRANSPORT_WS_PROTOCOL
       );
 
       client.onopen = () => {
         client.send(JSON.stringify(stepHeader));
         client.send(JSON.stringify(roundHeader));
-        enqueuePing();
+        // enqueuePing();
       };
 
       client.onmessage = (e) => {
@@ -119,14 +119,14 @@ export const useConsensus = () => {
         client.close();
       };
 
-      function enqueuePing() {
-        clearTimeout(queuedPing); // in case where a pong was received before a ping (this is valid behaviour)
-        queuedPing = setTimeout(() => {
-          if (client.readyState === WebSocket.OPEN) {
-            client.send(stringifyMessage({ type: MessageType.Ping }));
-          }
-        }, keepAlive);
-      }
+      // function enqueuePing() {
+      //   clearTimeout(queuedPing); // in case where a pong was received before a ping (this is valid behaviour)
+      //   queuedPing = setTimeout(() => {
+      //     if (client.readyState === WebSocket.OPEN) {
+      //       client.send(stringifyMessage({ type: MessageType.Ping }));
+      //     }
+      //   }, keepAlive);
+      // }
     }
     connect();
 
