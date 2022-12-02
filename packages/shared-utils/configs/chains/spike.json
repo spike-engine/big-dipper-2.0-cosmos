@@ -2,7 +2,7 @@
   "chainName": "spike",
   "title": "Spike Block Explorer",
   "extra": {
-    "profile": true,
+    "profile": false,
     "graphqlWs": true
   },
   "previewImage": "https://s3.bigdipper.live/cosmoshub.png",
@@ -178,7 +178,7 @@
   },
   "chains": [
     {
-      "network": "spike-testnet",
+      "network": "spikedtest_9000-1",
       "chainType": "Testnet",
       "genesis": {
         "time": "2021-07-13T08:00:00",
@@ -198,8 +198,8 @@
         }
       },
       "endpoints": {
-        "graphql": "http://chris.dag.fan:8080/v1/graphql",
-        "graphqlWebsocket": "ws://chris.dag.fan:8080/v1/graphql",
+        "graphql": "http://centos.dag.fan:8080/v1/graphql",
+        "graphqlWebsocket": "ws://centos.dag.fan:8080/v1/graphql",
         "publicRpcWebsocket": "ws://centos.dag.fan:26657/websocket"
       },
       "marketing": {

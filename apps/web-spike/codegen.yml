@@ -6,7 +6,7 @@ generates:
   ./src/graphql/types/general_types.ts:
     documents:
       - 'src/graphql/general/*'
-    schema: https://gql.desmos.forbole.com/v1/graphql
+    schema: http://centos.dag.fan:8080/v1/graphql
     plugins:
       - "typescript"
       - "typescript-operations"
