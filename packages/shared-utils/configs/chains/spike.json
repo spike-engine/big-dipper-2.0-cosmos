@@ -189,11 +189,11 @@
         "validator": "spikevaloper",
         "account": "spike"
       },
-      "primaryTokenUnit": "uspk",
-      "votingPowerTokenUnit": "uspk",
+      "primaryTokenUnit": "uspike",
+      "votingPowerTokenUnit": "uspike",
       "tokenUnits": {
-        "uspk": {
-          "display": "spk",
+        "uspike": {
+          "display": "uspk",
           "exponent": 6
         }
       },
