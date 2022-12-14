@@ -196,8 +196,9 @@ const ChainIcon = ({ className, type, ...props }: IconProps) => {
         type === 'icon' ? [strideIconDark, strideIconDark] : [strideLogoDark, strideLogoLight];
       break;
     case 'spike':
-      [iconDark, iconLight] =
-        type === 'icon' ? [baseIconLight, baseIconLight] : [baseLogoLight, baseLogoLight];
+      const spikeSVG = 'https://www.spike.fun/icons/spike.svg';
+      const spikeLogoSVG = 'https://www.spike.fun/icons/spike_logo.png';
+      [iconDark, iconLight] = type === 'icon' ? [spikeSVG, spikeSVG] : [spikeLogoSVG, spikeLogoSVG];
       break;
     default:
       throw new Error(`chain ${chainName} not supported`);
