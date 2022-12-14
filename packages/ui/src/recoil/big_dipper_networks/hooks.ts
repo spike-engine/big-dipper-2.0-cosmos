@@ -3,6 +3,7 @@ import { BigDipperNetwork } from '@/models';
 import { writeNetworks, writeSelectedNetwork } from '@/recoil/big_dipper_networks/selectors';
 import type { Networks, Selected } from '@/recoil/big_dipper_networks/types';
 import axios from 'axios';
+import networks from 'shared-utils/configs/networks.json';
 import { useEffect } from 'react';
 import { SetterOrUpdater, useRecoilState } from 'recoil';
 
@@ -29,8 +30,10 @@ export function useBigDipperNetworksRecoil(useQuery?: typeof useChainIdQuery) {
       try {
         /* Making a GET request to the NETWORK_LIST_API and storing the response in the results
         variable. */
-        const results = await axios.get(NETWORK_LIST_API);
-        data = results?.data ?? [];
+        // const results = await axios.get(NETWORK_LIST_API);
+        // data = results?.data ?? [];
+        const results: any = networks;
+        data = results ?? [];
       } catch (error) {
         console.error(error);
       }
