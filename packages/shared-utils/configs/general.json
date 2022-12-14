@@ -1,10 +1,10 @@
 {
   "maintainer": {
-    "name": "Forbole",
-    "url": "https://forbole.com"
+    "name": "Spike-Labs",
+    "url": "https://github.com/spike-labs"
   },
   "github": {
-    "reportIssue": "https://github.com/forbole/big-dipper-2.0-cosmos/issues"
+    "reportIssue": "https://github.com/spike-labs/big-dipper-2.0-cosmos"
   },
   "version": "base-v2.1.2"
 }

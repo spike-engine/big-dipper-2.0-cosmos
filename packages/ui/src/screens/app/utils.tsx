@@ -2,7 +2,7 @@ import chainConfig from '@/chainConfig';
 
 export const OPEN_GRAPH_SEO = {
   type: 'website',
-  site_name: 'Big Dipper',
+  site_name: 'Spike Labs',
   images: [
     {
       url: chainConfig.previewImage ?? '',
