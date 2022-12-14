@@ -1,4 +1,4 @@
-const FORBOLE_URL = 'https://www.forbole.com';
+const SPIKE_URL = 'https://www.spike.fun/';
 const BIG_DIPPER_URL = 'https://bigdipper.live';
 
 export const donateLink = {
@@ -11,20 +11,16 @@ export const footerLinks = [
     key: 'company',
     links: [
       {
-        key: 'forbole',
-        url: FORBOLE_URL,
-      },
-      {
-        key: 'stakeNow',
-        url: `${FORBOLE_URL}/stake-now`,
+        key: 'spike',
+        url: SPIKE_URL,
       },
       {
         key: 'contact',
-        url: `${FORBOLE_URL}/contact`,
+        url: `${SPIKE_URL}/contact`,
       },
       {
         key: 'blog',
-        url: `${FORBOLE_URL}/blog`,
+        url: `${SPIKE_URL}/blog`,
       },
     ],
   },

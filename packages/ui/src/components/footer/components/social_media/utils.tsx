@@ -9,21 +9,21 @@ export const socialMediaLinks: {
   {
     component: <TelegramIcon />,
     className: 'telegram',
-    url: 'https://t.me/forbole',
+    url: '',
   },
   {
     component: <LinkedinIcon />,
     className: 'linkedin',
-    url: 'https://www.linkedin.com/company/forbole',
+    url: '',
   },
   {
     component: <TwitterIcon />,
     className: 'twitter',
-    url: 'https://twitter.com/bigdipperlive',
+    url: '',
   },
   {
     component: <GithubIcon />,
     className: 'github',
-    url: 'https://github.com/forbole',
+    url: 'https://github.com/spike-labs',
   },
 ];
