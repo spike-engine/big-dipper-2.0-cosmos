@@ -61,6 +61,8 @@ import sifchainLogoLight from 'shared-utils/assets/logos/sifchain-light.png';
 import solanaLogoLight from 'shared-utils/assets/logos/solana-dark.svg?url';
 import strideLogoDark from 'shared-utils/assets/logos/stride-dark.svg?url';
 import strideLogoLight from 'shared-utils/assets/logos/stride-light.svg?url';
+import SpikeLogoBlack from 'shared-utils/assets/logos/spike-black.svg?url';
+import SpikeLogoWhite from 'shared-utils/assets/logos/spike-white.svg?url';
 
 type IconProps = Omit<ImageProps, 'id' | 'src'> & {
   type: 'icon' | 'logo';
@@ -197,8 +199,8 @@ const ChainIcon = ({ className, type, ...props }: IconProps) => {
       break;
     case 'spike':
       const spikeSVG = 'https://www.spike.fun/icons/spike.svg';
-      const spikeLogoSVG = 'https://www.spike.fun/icons/spike_logo.png';
-      [iconDark, iconLight] = type === 'icon' ? [spikeSVG, spikeSVG] : [spikeLogoSVG, spikeLogoSVG];
+      [iconDark, iconLight] =
+        type === 'icon' ? [spikeSVG, spikeSVG] : [SpikeLogoWhite, SpikeLogoBlack];
       break;
     default:
       throw new Error(`chain ${chainName} not supported`);
