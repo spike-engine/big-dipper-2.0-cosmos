@@ -12,8 +12,8 @@ import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import FooterLogoLight from 'shared-utils/assets/big-dipper-red.svg';
-import FooterLogoDark from 'shared-utils/assets/big-dipper-white.svg';
+import SpikeLogoBlack from 'shared-utils/assets/spike-black.svg';
+import SpikeLogoWhite from 'shared-utils/assets/spike-white.svg';
 
 const Footer: React.FC<{ className?: string }> = ({ className }) => {
   const { t } = useTranslation();
@@ -33,9 +33,9 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
         {/* ============================= */}
         <div className="footer__logo--container">
           {theme === 'light' ? (
-            <FooterLogoLight className="footer__logo" />
+            <SpikeLogoBlack className="footer__logo" />
           ) : (
-            <FooterLogoDark className="footer__logo" />
+            <SpikeLogoWhite className="footer__logo" />
           )}
           <p className="footer__slogan">{chainConfig.title}</p>
         </div>
